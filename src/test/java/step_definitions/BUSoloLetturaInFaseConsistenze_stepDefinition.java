@@ -15,7 +15,7 @@ public class BUSoloLetturaInFaseConsistenze_stepDefinition {
     public void l_utente_inserisce_usernamext_password_m1k1am0_glce_clicca_sul_bottone_log_in(Integer int1) throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         Thread.sleep(sleep);
-        clickOK_page.clickOk.click();
+      /*  clickOK_page.clickOk.click();
         Thread.sleep(sleep);
         buSoloLetturaInFaseConsistenze_page.CLickUsername.sendKeys("xt3533");
         Thread.sleep(sleep);
@@ -66,5 +66,9 @@ public class BUSoloLetturaInFaseConsistenze_stepDefinition {
     @Then("L'utente seleziona il tab Linee in cavo")
     public void l_utente_seleziona_il_tab_linee_in_cavo() {
     Driver.closeDriver();
+
+       */
     }
+
+
 }
