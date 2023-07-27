@@ -1,4 +1,4 @@
-@smoke @Terna
+@ @Terna
 Feature:Accesso con utenza PU o altre con permessi nella sezione
 
   Scenario:Visualizzazione delle Card presenti all'interno  del Project Configurator
