@@ -60,14 +60,16 @@ public class Driver {
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
                 case "chrome":
-                    DesiredCapabilities desiredCapabilities= DesiredCapabilities.chrome();
+                    /*DesiredCapabilities desiredCapabilities= DesiredCapabilities.chrome();
                     desiredCapabilities.acceptInsecureCerts();
                     desiredCapabilities.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
                     desiredCapabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS,true);
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.merge(desiredCapabilities);
+
+                     */
                     WebDriverManager.chromedriver().setup();
-                    driverPool.set(new ChromeDriver(chromeOptions));
+                    driverPool.set(new ChromeDriver());
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
