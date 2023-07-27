@@ -1,4 +1,4 @@
-@smoke @Terna
+@smoke  @Terna
 Feature:Verificare che nella sezione Consistenze all'interno del modulo Project Configurator, l'utente BU abbia solo possibilità di visualizzazione e non di editing
 
   Scenario:Verificare che nella sezione Consistenze all'interno del modulo Project Configurator, l'utente BU abbia solo possibilità di visualizzazione e non di editing
