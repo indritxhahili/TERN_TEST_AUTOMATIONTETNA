@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
         glue= {"step_definitions"},
         plugin = { "html:target/cucumber-report.html",
                "rerun:target/rerun.txt",
+                "json:target/cucumber-reports/Cucumber.json",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
         monochrome = true,
         //tags = "@smoke",
