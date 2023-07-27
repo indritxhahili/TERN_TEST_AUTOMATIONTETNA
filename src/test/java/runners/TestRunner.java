@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
                "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
         monochrome = true,
-        tags = "@smoke"
-        //publish = true
+        //tags = "@smoke",
+        publish = true
 )
 
 public class TestRunner {
