@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
         monochrome = true,
-        tags = "@RF51LineeAereeCampate"
+        tags = "@smoke"
         //publish = true
 )
 
