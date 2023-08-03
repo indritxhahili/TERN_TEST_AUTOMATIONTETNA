@@ -48,10 +48,10 @@ public class RF61AssociazioneCantiere1contratto_Page {
    @FindBy(xpath = "/html/body/app-root/main/cantiere/div/div[3]/conf-cantiere/mat-stepper/div/div[2]/div[1]/contratti-appaltatori/div/div/button/i")
   public WebElement OpenChiave;
 
-   @FindBy(xpath = "/html/body/app-root/main/cantiere/div/div[3]/conf-cantiere/mat-stepper/div/div[2]/div[1]/contratti-appaltatori/div/ng2-smart-table[1]/table/tbody/tr[1]/td[1]/input")
+   @FindBy(xpath = "//div[@class='mat-select-arrow-wrapper ng-tns-c74-6']")
   public WebElement clickPrimoCheckBox;
 
-   @FindBy(xpath = "/html/body/app-root/main/cantiere/div/div[3]/conf-cantiere/mat-stepper/div/div[2]/div[1]/div/button")
+   @FindBy(xpath = "//span[normalize-space()='DPT Nord-Ovest']")
   public WebElement Salva;
 
 }

@@ -62,10 +62,12 @@ public class SUConfiguratoEditingEditingConsistenze_stepDefinition {
     }
     @Then("l utente clicca su Creazione  Cantiere")
     public void l_utente_clicca_su_creazione_cantiere() throws InterruptedException {
-      suConfiguratoEditingEditingConsistenze_page.clickModifica.click();
+     /* suConfiguratoEditingEditingConsistenze_page.clickModifica.click();
         Thread.sleep(sleep);
         suConfiguratoEditingEditingConsistenze_page.clickSalva.click();
         Thread.sleep(sleep);
+
+      */
         Driver.closeDriver();
     }
 

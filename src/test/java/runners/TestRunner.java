@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber-reports/Cucumber.json",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
         monochrome = true,
-        //tags = "@smoke",
+        tags = "@RF56OrganigrammaCantiereModificabiliLucchettoAperto",
         publish = true
 )
 

@@ -18,8 +18,9 @@ public class https {
         chromeOptions.merge(desiredCapabilities);
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver(chromeOptions);
-        driver.manage().window().maximize();
-        driver.get("https://practice.cydeo.com/");
+        Dimension d = new Dimension(700,1080);
+        driver.manage().window().setSize(d);
+        driver.get("https://www.inps.it/");
 
        String AcctualTitle = "Practice";
        String expectedTitle = driver.getTitle();

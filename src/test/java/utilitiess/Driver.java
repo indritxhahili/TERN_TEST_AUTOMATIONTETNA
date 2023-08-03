@@ -68,8 +68,10 @@ public class Driver {
                     chromeOptions.merge(desiredCapabilities);
 
                      */
+                    ChromeOptions handlingSSL = new ChromeOptions();
+                    handlingSSL.setAcceptInsecureCerts(true);
                     WebDriverManager.chromedriver().setup();
-                    driverPool.set(new ChromeDriver());
+                    driverPool.set(new ChromeDriver(handlingSSL));
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
