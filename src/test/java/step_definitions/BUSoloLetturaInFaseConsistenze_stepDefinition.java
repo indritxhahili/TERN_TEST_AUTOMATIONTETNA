@@ -16,7 +16,7 @@ public class BUSoloLetturaInFaseConsistenze_stepDefinition {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         Thread.sleep(sleep);
        clickOK_page.clickOk.click();
-        Thread.sleep(sleep);
+       /* Thread.sleep(sleep);
         buSoloLetturaInFaseConsistenze_page.CLickUsername.sendKeys("xt3533");
         Thread.sleep(sleep);
         buSoloLetturaInFaseConsistenze_page.ClickPassword.sendKeys("M1k1am0?glc");
@@ -68,7 +68,11 @@ public class BUSoloLetturaInFaseConsistenze_stepDefinition {
     Driver.closeDriver();
 
 
+        */
+
     }
+
+
 
 
 }
