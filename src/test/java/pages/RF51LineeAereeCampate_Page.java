@@ -43,13 +43,13 @@ public class RF51LineeAereeCampate_Page {
     @FindBy(xpath = "//input[@formcontrolname='picchetto']")
     public WebElement codicePicchetto;
 
-    @FindBy(xpath = "//*[@id=\"mat-select-value-9\"]")
+    @FindBy(xpath = "//*[@id=\"mat-select-28\"]/div/div[2]")
     public WebElement DropdownRegione;
 
     @FindBy(xpath = "//span[normalize-space()='Lazio']")
     public WebElement clickLzioDropdwon;
 
-    @FindBy(xpath = "(//div[@id='mat-select-value-11'])[1]")
+    @FindBy(xpath = "(//div[@class='mat-select-arrow-wrapper ng-tns-c75-19'])[1]")
     public WebElement comuneDropdown;
 
     @FindBy(xpath = "//span[normalize-space()='Fabrica di Roma']")
@@ -70,7 +70,7 @@ public class RF51LineeAereeCampate_Page {
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[2]/div[3]/mat-select/div/div[2]")
     public WebElement ClickAltezza;
 
-    @FindBy(xpath = "(//span[normalize-space()='9'])[1]")
+    @FindBy(xpath = "//span[normalize-space()='15']")
     public WebElement click5NellaAltezza;
 
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[2]/div[4]/mat-select/div/div[2]")
@@ -100,10 +100,10 @@ public class RF51LineeAereeCampate_Page {
     @FindBy(xpath = "(//span[normalize-space()='Lazio'])[1]")
     public WebElement clickLazio;
 
-    @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[1]/div[3]/div/mat-select/div/div[2]")
+    @FindBy(xpath = "//*[@id=\"mat-select-44\"]/div/div[2]")
     public WebElement comuneautomatico3;
 
-    @FindBy(xpath = "(//span[normalize-space()='Fabrica di Roma'])[1]")
+    @FindBy(xpath = "//span[normalize-space()='Fabrica di Roma']")
     public WebElement clickRomaAutomatico3;
 
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[2]/div[1]/mat-select/div/div[2]")
@@ -121,7 +121,7 @@ public class RF51LineeAereeCampate_Page {
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[2]/div[3]/mat-select/div/div[2]")
     public WebElement clickAltezzaAutomatico3;
 
-    @FindBy(xpath = "(//span[normalize-space()='9'])[1]")
+    @FindBy(xpath = "//span[normalize-space()='15']")
     public WebElement click10Automatico3;
 
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[2]/div[4]/mat-select/div/div[2]")
@@ -142,19 +142,19 @@ public class RF51LineeAereeCampate_Page {
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[4]/div[2]/input")
     public WebElement clickLongitudineAutomatico3;
 
-    @FindBy(xpath = "//*[@id=\"mat-tab-content-0-0\"]/div/div/linee-aeree-campate/div[1]/div[2]/div/button[2]")
+    @FindBy(xpath = "//*[@id=\"mat-tab-content-0-0\"]/div/div/linee-aeree-campate/div/div[4]/div[2]/div[1]/button[2]/span")
     public WebElement aggiungiCampate;
 
-    @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-campata/div[2]/form/div/div[1]/div[1]/mat-select/div/div[2]")
+    @FindBy(xpath = "//*[@id=\"mat-select-56\"]/div/div[2]")
     public WebElement codiceSostegno;
 
-    @FindBy(xpath = "/html/body/div[2]/div[4]/div/div/div/mat-option[11]/span")
+    @FindBy(xpath = "//span[normalize-space()='automatico1119.69466937644535']")
     public WebElement clickAutomatico2DaCodiceSostegno;
 
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-campata/div[2]/form/div/div[1]/div[2]/mat-select/div/div[2]")
     public WebElement clickcodiceA_Automatico3;
 
-    @FindBy(xpath = "/html/body/div[2]/div[4]/div/div/div/mat-option[12]/span")
+    @FindBy(xpath = "//span[normalize-space()='automatico118.231073029037297']")
     public WebElement clickAutomatico3;
 
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-campata/div[2]/form/div/div[2]/div[1]/input")

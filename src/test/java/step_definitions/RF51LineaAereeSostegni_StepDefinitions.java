@@ -1,9 +1,12 @@
 package step_definitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import pages.ClickOK_Page;
 import pages.RF51LineeAereeSostegni_Page;
 import utilitiess.ConfigurationReader;
@@ -13,7 +16,7 @@ public class RF51LineaAereeSostegni_StepDefinitions {
     RF51LineeAereeSostegni_Page rf51LineeAereeSostegni_page = new RF51LineeAereeSostegni_Page();
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
-    @Given("L'utente inserisce  username password M1k1am0?glce clicca sul botnet Log In")
+   /* @Given("L'utente inserisce  username password M1k1am0?glce clicca sul botnet Log In")
     public void l_utente_inserisce_username_password_m1k1am0_glce_clicca_sul_botnet_log_in() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         Thread.sleep(sleep);
@@ -39,8 +42,14 @@ public class RF51LineaAereeSostegni_StepDefinitions {
             rf51LineeAereeSostegni_page.prijectConfigClick.click();
         }
     }
+
+    */
     @Then("L'utente seleziona lorganizzazioneSSD RIT REI ARI Cagliari")
-    public void l_utente_seleziona_lorganizzazione_ssd_rit_rei_ari_cagliari() {
+    public void l_utente_seleziona_lorganizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf51LineeAereeSostegni_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf51LineeAereeSostegni_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);
@@ -107,7 +116,8 @@ public class RF51LineaAereeSostegni_StepDefinitions {
     }
     @Then("L'utente inserisce i seguenti dati Codice picchetto automatico1 Regione Lazio Comune Roma Serie sostegno NORM Altezza\"")
     public void l_utente_inserisce_i_seguenti_dati_codice_picchetto_automatico1_regione_lazio_comune_roma_serie_sostegno_norm_altezza() throws InterruptedException {
-        rf51LineeAereeSostegni_page.codicePicchetto.sendKeys("automatico1");
+        double random = Math.random() * 22 + 1;
+        rf51LineeAereeSostegni_page.codicePicchetto.sendKeys("automatico1"+random);
         try {
             Thread.sleep(sleep);
         } catch (InterruptedException e) {
@@ -128,26 +138,25 @@ public class RF51LineaAereeSostegni_StepDefinitions {
         rf51LineeAereeSostegni_page.marca.click();
         Thread.sleep(sleep);
         rf51LineeAereeSostegni_page.clickDentroMarca.click();
-        Thread.sleep(sleep);
-        rf51LineeAereeSostegni_page.ClickAltezza.click();
-        Thread.sleep(sleep);
-        rf51LineeAereeSostegni_page.click5NellaAltezza.click();
-        Thread.sleep(sleep);
         rf51LineeAereeSostegni_page.tipologia.click();
         Thread.sleep(sleep);
         rf51LineeAereeSostegni_page.AmaroTipologia.click();
         Thread.sleep(sleep);
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,200)","");
-        rf51LineeAereeSostegni_page.latitudineCLick.sendKeys("42");
+        rf51LineeAereeSostegni_page.latitudineCLick.sendKeys("4700000");
         Thread.sleep(sleep);
-        rf51LineeAereeSostegni_page.Longitudine.sendKeys("10");
+        rf51LineeAereeSostegni_page.Longitudine.sendKeys("700000");
         Thread.sleep(sleep);
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", rf51LineeAereeSostegni_page.liveloDiTensione);
         Thread.sleep(sleep);
         rf51LineeAereeSostegni_page.liveloDiTensione.click();
         Thread.sleep(sleep);
-        rf51LineeAereeSostegni_page.click380KW.click();
+       // rf51LineeAereeSostegni_page.click380KW.click();
+       // Thread.sleep(sleep);
+        rf51LineeAereeSostegni_page.ClickAltezza.click();
+        Thread.sleep(sleep);
+        rf51LineeAereeSostegni_page.click5NellaAltezza.click();
         Thread.sleep(sleep);
         js.executeScript("window.scrollBy(0,400)","");
         Thread.sleep(sleep);

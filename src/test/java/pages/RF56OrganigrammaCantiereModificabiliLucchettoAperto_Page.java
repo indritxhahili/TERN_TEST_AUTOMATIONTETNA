@@ -48,10 +48,10 @@ public class RF56OrganigrammaCantiereModificabiliLucchettoAperto_Page {
     @FindBy(xpath = "//*[@id=\"cdk-step-content-0-1\"]/ruoli/form/div[1]/button/i")
     public WebElement elementoOcchio;
 
-  @FindBy(xpath = "/html/body/app-root/main/cantiere/div/div[3]/conf-cantiere/mat-stepper/div/div[2]/div[2]/ruoli/form/div[2]/div[2]/div[2]/div/mat-select/div/div[2]")
+  @FindBy(xpath = "//*[@id=\"mat-select-20\"]/div/div[2]")
     public WebElement clickDropDownCollaudatore;
 
-  @FindBy(xpath = "(//span[@class='mat-option-text'][normalize-space()='Paolo Montani, A392733'])[1]")
+  @FindBy(xpath = "(//span[normalize-space()='Manuel Giachetti, A392510'])[1]")
     public WebElement clickManuel_Giachetti;
 
   @FindBy(xpath = "(//span[@class='ms-2'][normalize-space()='Salva'])[2]")

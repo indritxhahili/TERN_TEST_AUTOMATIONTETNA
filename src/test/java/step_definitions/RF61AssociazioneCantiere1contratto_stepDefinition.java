@@ -12,7 +12,7 @@ public class RF61AssociazioneCantiere1contratto_stepDefinition {
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
     RF61AssociazioneCantiere1contratto_Page rf61AssociazioneCantiere1contratto_page = new RF61AssociazioneCantiere1contratto_Page();
-    @Given("Lutente   inserisce usernamext {int}  password M1k1am0?glce clicca sul bottone Log In")
+  /*  @Given("Lutente   inserisce usernamext {int}  password M1k1am0?glce clicca sul bottone Log In")
     public void lutente_inserisce_usernamext_password_m1k1am0_glce_clicca_sul_bottone_log_in(Integer int1) throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         try {
@@ -49,8 +49,14 @@ public class RF61AssociazioneCantiere1contratto_stepDefinition {
         }
 
     }
+
+   */
     @Then("Lutente   selezionaorganizzazioneSSD-RIT-REI-ARI Cagliari")
-    public void lutente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari() {
+    public void lutente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf61AssociazioneCantiere1contratto_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf61AssociazioneCantiere1contratto_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);
@@ -116,14 +122,13 @@ public class RF61AssociazioneCantiere1contratto_stepDefinition {
         Thread.sleep(sleep);
         rf61AssociazioneCantiere1contratto_page.OpenChiave.click();
         Thread.sleep(sleep);
-        rf61AssociazioneCantiere1contratto_page.clickPrimoCheckBox.click();
+       /* rf61AssociazioneCantiere1contratto_page.clickPrimoCheckBox.click();
         Thread.sleep(sleep);
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,1600)","");
         Thread.sleep(sleep);
-        rf61AssociazioneCantiere1contratto_page.Salva.click();
-        Thread.sleep(sleep);
-        Driver.closeDriver();
+      //  rf61AssociazioneCantiere1contratto_page.Salva.click();
+        Driver.closeDriver();*/
     }
 
 }

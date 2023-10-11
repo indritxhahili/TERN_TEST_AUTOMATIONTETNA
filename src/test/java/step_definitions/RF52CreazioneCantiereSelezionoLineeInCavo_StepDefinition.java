@@ -12,7 +12,7 @@ public class RF52CreazioneCantiereSelezionoLineeInCavo_StepDefinition {
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
     RF52CreazioneCantiereSelezionoLineeInCavo_Page rf52CreazioneCantiereSelezionoLineeInCavo_page = new RF52CreazioneCantiereSelezionoLineeInCavo_Page();
-    @Given("L utente inserisce username  xt3533 password M1k1am0?glce clicca sul bottone Log In")
+   /* @Given("L utente inserisce username  xt3533 password M1k1am0?glce clicca sul bottone Log In")
     public void l_utente_inserisce_username_xt3533_password_m1k1am0_glce_clicca_sul_bottone_log_in() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         try {
@@ -46,8 +46,14 @@ public class RF52CreazioneCantiereSelezionoLineeInCavo_StepDefinition {
             rf52CreazioneCantiereSelezionoLineeInCavo_page.prijectConfigClick.click();
         }
     }
+
+    */
     @Then("L utente seleziona l organizzazione SSD-RIT-REI-ARI Cagliari")
-    public void l_utente_seleziona_l_organizzazione_ssd_rit_rei_ari_cagliari() {
+    public void l_utente_seleziona_l_organizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf52CreazioneCantiereSelezionoLineeInCavo_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf52CreazioneCantiereSelezionoLineeInCavo_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);

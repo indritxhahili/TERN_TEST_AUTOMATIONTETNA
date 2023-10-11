@@ -11,7 +11,7 @@ public class SUNonConfigurato_stepDefinitions {
     SUNonConfigurato_Page suNonConfigurato_page = new SUNonConfigurato_Page();
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
-    @Given("L utente  inserisce  usernamext {int}  password  M1k1am0?glce clicca sul bottone  Log In")
+    /* @Given("L utente  inserisce  usernamext {int}  password  M1k1am0?glce clicca sul bottone  Log In")
     public void l_utente_inserisce_usernamext_password_m1k1am0_glce_clicca_sul_bottone_log_in(Integer int1) throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         Thread.sleep(sleep);
@@ -33,8 +33,14 @@ public class SUNonConfigurato_stepDefinitions {
             suNonConfigurato_page.prijectConfigClick.click();
         }
     }
+
+     */
     @Then("L utente  selezionaorganizzazio ne SSD-RIT-REI-ARI  Cagliari")
     public void l_utente_selezionaorganizzazio_ne_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        suNonConfigurato_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         if (!suNonConfigurato_page.SelezionaUnorganizzazione.isEnabled()){
             System.out.println("Step two failed");
         }else

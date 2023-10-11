@@ -11,12 +11,12 @@ public class BUSoloLetturaInFaseConsistenze_stepDefinition {
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
     BUSoloLetturaInFaseConsistenze_Page buSoloLetturaInFaseConsistenze_page = new BUSoloLetturaInFaseConsistenze_Page();
-    @Given("L utente  inserisce usernamext  {int}  password  M1k1am0?glce clicca sul bottone Log In")
+   /* @Given("L utente  inserisce usernamext  {int}  password  M1k1am0?glce clicca sul bottone Log In")
     public void l_utente_inserisce_usernamext_password_m1k1am0_glce_clicca_sul_bottone_log_in(Integer int1) throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         Thread.sleep(sleep);
        clickOK_page.clickOk.click();
-       /* Thread.sleep(sleep);
+        Thread.sleep(sleep);
         buSoloLetturaInFaseConsistenze_page.CLickUsername.sendKeys("xt3533");
         Thread.sleep(sleep);
         buSoloLetturaInFaseConsistenze_page.ClickPassword.sendKeys("M1k1am0?glc");
@@ -33,8 +33,14 @@ public class BUSoloLetturaInFaseConsistenze_stepDefinition {
             buSoloLetturaInFaseConsistenze_page.prijectConfigClick.click();
         }
     }
+
+    */
     @Then("L utente  selezionaorganizzazioneSSD- RIT-REI-ARI  Cagliari")
     public void l_utente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        buSoloLetturaInFaseConsistenze_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         if (!buSoloLetturaInFaseConsistenze_page.SelezionaUnorganizzazione.isEnabled()){
             System.out.println("Step two failed");
         }else
@@ -68,7 +74,7 @@ public class BUSoloLetturaInFaseConsistenze_stepDefinition {
     Driver.closeDriver();
 
 
-        */
+
 
     }
 

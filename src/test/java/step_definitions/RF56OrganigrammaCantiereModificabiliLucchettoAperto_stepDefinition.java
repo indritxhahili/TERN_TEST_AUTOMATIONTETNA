@@ -13,7 +13,7 @@ public class RF56OrganigrammaCantiereModificabiliLucchettoAperto_stepDefinition 
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
     RF56OrganigrammaCantiereModificabiliLucchettoAperto_Page rf56OrganigrammaCantiereModificabiliLucchettoAperto_page = new RF56OrganigrammaCantiereModificabiliLucchettoAperto_Page();
-    @Given("L'utent e inserisce username  xt3533 password M1k1am0?glce clicca subl bottone Log In")
+  /*  @Given("L'utent e inserisce username  xt3533 password M1k1am0?glce clicca subl bottone Log In")
     public void l_utent_e_inserisce_username_xt3533_password_m1k1am0_glce_clicca_subl_bottone_log_in() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         try {
@@ -47,8 +47,14 @@ public class RF56OrganigrammaCantiereModificabiliLucchettoAperto_stepDefinition 
             rf56OrganigrammaCantiereModificabiliLucchettoAperto_page.prijectConfigClick.click();
         }
     }
+
+   */
     @Then("L'utent e seleziona l' organizzazione:SSD-RIT-REI-ARI Cagliari")
-    public void l_utent_e_seleziona_l_organizzazione_ssd_rit_rei_ari_cagliari() {
+    public void l_utent_e_seleziona_l_organizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf56OrganigrammaCantiereModificabiliLucchettoAperto_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf56OrganigrammaCantiereModificabiliLucchettoAperto_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);
@@ -128,8 +134,8 @@ public class RF56OrganigrammaCantiereModificabiliLucchettoAperto_stepDefinition 
         Thread.sleep(sleep);
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);",  rf56OrganigrammaCantiereModificabiliLucchettoAperto_page.clickSalva);
         Thread.sleep(sleep);
-        rf56OrganigrammaCantiereModificabiliLucchettoAperto_page.clickSalva.click();
-        Thread.sleep(sleep);
+       // rf56OrganigrammaCantiereModificabiliLucchettoAperto_page.clickSalva.click();
+        //Thread.sleep(sleep);
         Driver.closeDriver();
     }
 }

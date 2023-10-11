@@ -46,4 +46,10 @@ public class RF50_Associazioni_Consistenze_Stazioni_Elettriche_Pages {
 
     @FindBy(xpath = "//*[@id=\"mat-tab-label-0-2\"]")
     public WebElement StazioniElettriche;
+
+    @FindBy(xpath = "//div[@class='cdk-overlay-container']")
+    public WebElement clickAbbilita;
+
+    @FindBy(xpath = "//*[@id=\"mat-tab-content-0-2\"]/div/div/stazioni-elettriche/div[2]/ng2-smart-table/table/tbody/tr/td[23]/ng2-smart-table-cell/table-cell-view-mode/div/custom-view-component/actions-buttons/div/a")
+    public WebElement nonabbilitato;
 }

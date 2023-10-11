@@ -10,15 +10,21 @@ import org.junit.runner.RunWith;
        
         features = "src/test/resources/features",
         glue= {"step_definitions"},
-        plugin = { "html:target/cucumber-report.html",
-               "rerun:target/rerun.txt",
-                "json:target/cucumber-reports/Cucumber.json",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
-        monochrome = true,
-        tags = "@RF56OrganigrammaCantiereModificabiliLucchettoAperto",
-        publish = true
+        plugin = {"json:target/cucumber-reports/Cucumber.json",},
+       // monochrome = true,
+        tags = "@RF51LineeAereeSostegni"
+        //publish = true
 )
 
 public class TestRunner {
 
 }
+/* features = "src/test/resources/features",
+        glue= {"step_definitions"},
+        plugin = { "html:target/cucumber-report.html",
+               "rerun:target/rerun.txt",
+                "json:target/cucumber-reports/Cucumber.json",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
+        monochrome = true,
+        tags = "@RF51LineeAereeSostegni",
+        publish = true*/

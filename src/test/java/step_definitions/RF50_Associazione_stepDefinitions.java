@@ -15,7 +15,7 @@ public class RF50_Associazione_stepDefinitions {
        int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
        ClickOK_Page clickOK_page = new ClickOK_Page();
        @Test
-    @Given("L'utente inserisce username xt3533password: M1k1am0?glc e clicca sul bottone Log In")
+  /*  @Given("L'utente inserisce username xt3533password: M1k1am0?glc e clicca sul bottone Log In")
     public void l_utente_inserisce_username_xt3533password_m1k1am0_glc_e_clicca_sul_bottone_log_in() throws InterruptedException {
            Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
            Thread.sleep(sleep);
@@ -34,11 +34,17 @@ public class RF50_Associazione_stepDefinitions {
         }else {
             System.out.println("Step one passed");
             Thread.sleep(sleep);
-            rf50_associazione_page.prijectConfigClick.click();
+
         }
     }
+
+   */
     @Then("L'utente seleziona l'organizzazione: SSD-RIT-REI-ARI Cagliari")
     public void l_utente_seleziona_l_organizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf50_associazione_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         if (!rf50_associazione_page.SelezionaUnorganizzazione.isEnabled()){
             System.out.println("Step two failed");
         }else

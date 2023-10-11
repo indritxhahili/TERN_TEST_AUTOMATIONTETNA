@@ -11,7 +11,7 @@ public class RF54VsualizzazioneExOverviewProgettoSintesiWBS_stepDefinition {
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
      RF54VsualizzazioneExOverviewProgettoSintesiWBS_Page  rf54VsualizzazioneExOverviewProgettoSintesiWBS_page = new RF54VsualizzazioneExOverviewProgettoSintesiWBS_Page();
-    @Given("L utente  inserisce usernamext3533  password M1k1am0?glce clicca sul bottone Log In")
+  /*  @Given("L utente  inserisce usernamext3533  password M1k1am0?glce clicca sul bottone Log In")
     public void l_utente_inserisce_usernamext3533_password_m1k1am0_glce_clicca_sul_bottone_log_in() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         try {
@@ -45,8 +45,14 @@ public class RF54VsualizzazioneExOverviewProgettoSintesiWBS_stepDefinition {
             rf54VsualizzazioneExOverviewProgettoSintesiWBS_page.prijectConfigClick.click();
         }
     }
+
+   */
     @Then("L utente  selezionaorganizzazione  SSD-RIT-REI-ARI Cagliari")
-    public void l_utente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari() {
+    public void l_utente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf54VsualizzazioneExOverviewProgettoSintesiWBS_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf54VsualizzazioneExOverviewProgettoSintesiWBS_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);

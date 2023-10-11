@@ -38,10 +38,10 @@ public class RF52CreazioneCantiereSelezionoLineeAeree_Page {
     @FindBy(xpath = "(//button[normalize-space()='Creazione Cantiere'])[1]")
     public WebElement CreazioneCantiere;
 
-    @FindBy(xpath = "(//button[@class='btn btn-primary m-1'])[1]")
+    @FindBy(xpath = "/html/body/app-root/main/creazione-cantiere/div/div[3]/div[1]/div[2]/button/span")
     public WebElement aggiungi;
 
-    @FindBy(xpath = "(//input[@placeholder='Nome'])[1]")
+    @FindBy(xpath = "/html/body/app-root/main/creazione-cantiere/div/div[3]/div[2]/ng2-smart-table/table/thead/tr[2]/td[2]/ng2-smart-table-cell/table-cell-edit-mode/div/table-cell-custom-editor/app-input-cantiere/input")
     public WebElement click_Nome_Cantiere;
 
     @FindBy(xpath = "(//input[@placeholder='Descrizione'])[1]")
@@ -50,7 +50,7 @@ public class RF52CreazioneCantiereSelezionoLineeAeree_Page {
     @FindBy(xpath = "/html/body/app-root/main/creazione-cantiere/div/div[3]/div[2]/ng2-smart-table/table/thead/tr[2]/td[4]/ng2-smart-table-cell/table-cell-edit-mode/div/table-cell-custom-editor/list-custom-edit/select")
     public WebElement clickTipologiaDropdownMenu;
 
-    @FindBy(xpath = "/html/body/app-root/main/creazione-cantiere/div/div[3]/div[2]/ng2-smart-table/table/thead/tr[2]/td[4]/ng2-smart-table-cell/table-cell-edit-mode/div/table-cell-custom-editor/list-custom-edit/select/option[1]")
+    @FindBy(xpath = "//option[@value='Linee aeree']")
     public WebElement lineAereo;
 
     @FindBy(xpath = "/html/body/app-root/main/creazione-cantiere/div/div[3]/div[2]/ng2-smart-table/table/thead/tr[2]/td[6]/ng2-st-actions/a[1]/i")

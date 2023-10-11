@@ -11,7 +11,7 @@ public class RF57ModificaVNLDIAVisualizzazioneContemporanea_stepDefinition {
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
     RF57ModificaVNLDIAVisualizzazioneContemporanea_Page  rf57ModificaVNLDIAVisualizzazioneContemporanea_page = new RF57ModificaVNLDIAVisualizzazioneContemporanea_Page();
-    @Given("Lutente  inserisce usernamext {int}  password M1k1am0?glce clicca sul bottone Log In")
+   /* @Given("Lutente  inserisce usernamext {int}  password M1k1am0?glce clicca sul bottone Log In")
     public void lutente_inserisce_usernamext_password_m1k1am0_glce_clicca_sul_bottone_log_in(Integer int1) throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         try {
@@ -47,8 +47,14 @@ public class RF57ModificaVNLDIAVisualizzazioneContemporanea_stepDefinition {
             Thread.sleep(sleep);
         }
     }
+
+    */
     @Then("Lutente  selezionaorganizzazioneSSD-RIT-REI-ARI Cagliari")
-    public void lutente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari() {
+    public void lutente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf57ModificaVNLDIAVisualizzazioneContemporanea_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf57ModificaVNLDIAVisualizzazioneContemporanea_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);

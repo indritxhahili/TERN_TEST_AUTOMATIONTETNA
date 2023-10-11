@@ -12,7 +12,7 @@ public class RF61VisualizzazioneRuoloCommittenteInFaseConfigurazione_stepDefinit
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
     RF61VisualizzazioneRuoloCommittenteInFaseConfigurazione_Page rf61VisualizzazioneRuoloCommittenteInFaseConfigurazione_page = new RF61VisualizzazioneRuoloCommittenteInFaseConfigurazione_Page();
-    @Given("L utente  inserisce usernamext {int}  password  M1k1am0?glce clicca sul bottone Log In")
+  /*  @Given("L utente  inserisce usernamext {int}  password  M1k1am0?glce clicca sul bottone Log In")
     public void l_utente_inserisce_usernamext_password_m1k1am0_glce_clicca_sul_bottone_log_in(Integer int1) throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         try {
@@ -46,8 +46,14 @@ public class RF61VisualizzazioneRuoloCommittenteInFaseConfigurazione_stepDefinit
             rf61VisualizzazioneRuoloCommittenteInFaseConfigurazione_page.prijectConfigClick.click();
         }
     }
+
+   */
     @Then("L utente  selezionaorganizzazioneSSD-RIT-REI-ARI  Cagliari")
-    public void l_utente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari() {
+    public void l_utente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf61VisualizzazioneRuoloCommittenteInFaseConfigurazione_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf61VisualizzazioneRuoloCommittenteInFaseConfigurazione_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);

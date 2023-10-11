@@ -68,10 +68,20 @@ public class Driver {
                     chromeOptions.merge(desiredCapabilities);
 
                      */
+
                     ChromeOptions handlingSSL = new ChromeOptions();
                     handlingSSL.setAcceptInsecureCerts(true);
                     WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver(handlingSSL));
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
+
+                case "chromeTerna":
+                    WebDriverManager.chromedriver().setup();
+                    ChromeOptions options = new ChromeOptions();
+                    options.setExperimentalOption("debuggerAddress", "localhost:9226");
+                    driverPool.set(new ChromeDriver(options));
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;

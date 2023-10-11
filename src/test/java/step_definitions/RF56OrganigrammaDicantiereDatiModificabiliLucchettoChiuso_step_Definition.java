@@ -13,7 +13,7 @@ public class RF56OrganigrammaDicantiereDatiModificabiliLucchettoChiuso_step_Defi
     RF56OrganigrammaDicantiereDatiModificabiliLucchettoChiuso_Page rf56OrganigrammaDicantiereDatiModificabiliLucchettoChiuso_page = new RF56OrganigrammaDicantiereDatiModificabiliLucchettoChiuso_Page();
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
-    @Given("L'utente inserisce username  xt3533 password M1k1am0?glce clicca subl bottone Log In")
+ /*   @Given("L'utente inserisce username  xt3533 password M1k1am0?glce clicca subl bottone Log In")
     public void l_utente_inserisce_username_xt3533_password_m1k1am0_glce_clicca_subl_bottone_log_in() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         try {
@@ -48,8 +48,14 @@ public class RF56OrganigrammaDicantiereDatiModificabiliLucchettoChiuso_step_Defi
             rf56OrganigrammaDicantiereDatiModificabiliLucchettoChiuso_page.prijectConfigClick.click();
         }
     }
+
+  */
     @Then("L'utente seleziona l' organizzazione:SSD-RIT-REI-ARI Cagliari")
-    public void l_utente_seleziona_l_organizzazione_ssd_rit_rei_ari_cagliari() {
+    public void l_utente_seleziona_l_organizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf56OrganigrammaDicantiereDatiModificabiliLucchettoChiuso_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf56OrganigrammaDicantiereDatiModificabiliLucchettoChiuso_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);

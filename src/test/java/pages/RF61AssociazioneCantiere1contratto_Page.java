@@ -51,7 +51,7 @@ public class RF61AssociazioneCantiere1contratto_Page {
    @FindBy(xpath = "//div[@class='mat-select-arrow-wrapper ng-tns-c74-6']")
   public WebElement clickPrimoCheckBox;
 
-   @FindBy(xpath = "//span[normalize-space()='DPT Nord-Ovest']")
+   @FindBy(xpath = "(//button[@type='button'])[3]")
   public WebElement Salva;
 
 }

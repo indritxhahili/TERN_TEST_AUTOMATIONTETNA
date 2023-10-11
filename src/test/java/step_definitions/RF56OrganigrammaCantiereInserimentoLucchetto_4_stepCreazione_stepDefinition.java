@@ -12,7 +12,7 @@ public class RF56OrganigrammaCantiereInserimentoLucchetto_4_stepCreazione_stepDe
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
     RF56OrganigrammaCantiereInserimentoLucchetto_4_stepCreazione_Page rf56OrganigrammaCantiereInserimentoLucchetto_4_stepCreazione_page = new RF56OrganigrammaCantiereInserimentoLucchetto_4_stepCreazione_Page();
-    @Given("Lutente  inserisce  usernamext3533  password  M1k1am0?glce clicca sul bottone Log In luogo")
+  /*  @Given("Lutente  inserisce  usernamext3533  password  M1k1am0?glce clicca sul bottone Log In luogo")
     public void lutente_inserisce_usernamext3533_password_m1k1am0_glce_clicca_sul_bottone_log_in_luogo() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         try {
@@ -46,8 +46,14 @@ public class RF56OrganigrammaCantiereInserimentoLucchetto_4_stepCreazione_stepDe
             rf56OrganigrammaCantiereInserimentoLucchetto_4_stepCreazione_page.prijectConfigClick.click();
         }
     }
+
+   */
     @Then("Lutente  selezionaorganizzazione  SSD- RIT-REI-ARI  Cagliari luogo")
-    public void lutente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari_luogo() {
+    public void lutente_selezionaorganizzazione_ssd_rit_rei_ari_cagliari_luogo() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf56OrganigrammaCantiereInserimentoLucchetto_4_stepCreazione_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf56OrganigrammaCantiereInserimentoLucchetto_4_stepCreazione_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);

@@ -9,7 +9,8 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class https {
-    public static void main(String[] args) throws InterruptedException {
+   /*
+   public static void main(String[] args) throws InterruptedException {
         DesiredCapabilities desiredCapabilities= DesiredCapabilities.chrome();
         desiredCapabilities.acceptInsecureCerts();
         desiredCapabilities.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
@@ -20,9 +21,9 @@ public class https {
         WebDriver driver = new ChromeDriver(chromeOptions);
         Dimension d = new Dimension(700,1080);
         driver.manage().window().setSize(d);
-        driver.get("https://www.inps.it/");
+        driver.get("https://eacs-col.servizi.prv/test");
 
-       String AcctualTitle = "Practice";
+       String AcctualTitle = "EACS";
        String expectedTitle = driver.getTitle();
 
         Assert.assertEquals(expectedTitle,AcctualTitle);
@@ -30,4 +31,8 @@ public class https {
         System.out.println(AcctualTitle);
         System.out.println(expectedTitle);
     }
+
+
+
+    */
 }

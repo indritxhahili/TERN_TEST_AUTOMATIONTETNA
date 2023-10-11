@@ -43,7 +43,7 @@ public class RF52CreazioneCantiereSelezionoStazioniElettriche_Page {
  @FindBy(xpath = "(//button[@class='btn btn-primary m-1'])[1]")
     public WebElement aggiungi;
 
- @FindBy(xpath = "(//input[@placeholder='Nome'])[1]")
+ @FindBy(xpath = "//input[@placeholder='Nome *']")
  public WebElement click_Nome_Cantiere;
 
  @FindBy(xpath = "(//input[@placeholder='Descrizione'])[1]")

@@ -3,7 +3,10 @@ package step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import pages.ClickOK_Page;
 import pages.RF51LineeAereeCampate_Page;
 import utilitiess.ConfigurationReader;
@@ -13,7 +16,7 @@ public class RF51LineeAereeCampate_StepDefinitons {
     RF51LineeAereeCampate_Page rf51LineeAereeCampate_page = new RF51LineeAereeCampate_Page();
     int sleep =  (ConfigurationReader.getPropertyInt("Time_Sleep"));
     ClickOK_Page clickOK_page = new ClickOK_Page();
-    @Given("Lutente inserisce username xt3533 1am0?gl e clicca sul bottone Log In")
+   /* @Given("Lutente inserisce username xt3533 1am0?gl e clicca sul bottone Log In")
     public void lutente_inserisce_username_xt3533_1am0_gl_e_clicca_sul_bottone_log_in() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
         Thread.sleep(sleep);
@@ -39,8 +42,14 @@ public class RF51LineeAereeCampate_StepDefinitons {
             rf51LineeAereeCampate_page.prijectConfigClick.click();
         }
     }
+
+    */
     @Then("Lutente seleziona lorganizzazione SSD-RIT-REI-ARI Cagliari")
-    public void lutente_seleziona_lorganizzazione_ssd_rit_rei_ari_cagliari() {
+    public void lutente_seleziona_lorganizzazione_ssd_rit_rei_ari_cagliari() throws InterruptedException {
+        Driver.getDriver().get(ConfigurationReader.getProperty("Terna"));
+        Thread.sleep(sleep);
+        rf51LineeAereeCampate_page.prijectConfigClick.click();
+        Thread.sleep(sleep);
         rf51LineeAereeCampate_page.SelezionaUNorganizzazioneDropDown.click();
         try {
             Thread.sleep(sleep);
@@ -106,7 +115,8 @@ public class RF51LineeAereeCampate_StepDefinitons {
     }
     @Then("\"L'utente inserisce i seguenti dati Codice picchetto automatico2Regione Lazio Comune Roma Serie sostegno")
     public void l_utente_inserisce_i_seguenti_dati_codice_picchetto_automatico2regione_lazio_comune_roma_serie_sostegno() throws InterruptedException {
-        rf51LineeAereeCampate_page.codicePicchetto.sendKeys("automatico2");
+        double random = Math.random() * 22 + 1;
+        rf51LineeAereeCampate_page.codicePicchetto.sendKeys("automatico1"+random);
         try {
             Thread.sleep(sleep);
         } catch (InterruptedException e) {
@@ -132,14 +142,6 @@ public class RF51LineeAereeCampate_StepDefinitons {
         Thread.sleep(sleep);
         rf51LineeAereeCampate_page.clickDentroMarca.click();
         Thread.sleep(sleep);
-        rf51LineeAereeCampate_page.ClickAltezza.click();
-        try {
-            Thread.sleep(sleep);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        rf51LineeAereeCampate_page.click5NellaAltezza.click();
-        Thread.sleep(sleep);
         rf51LineeAereeCampate_page.tipologia.click();
         try {
             Thread.sleep(sleep);
@@ -148,19 +150,28 @@ public class RF51LineeAereeCampate_StepDefinitons {
         }
         rf51LineeAereeCampate_page.AmaroTipologia.click();
         Thread.sleep(sleep);
-        rf51LineeAereeCampate_page.latitudineCLick.sendKeys("42");
+        rf51LineeAereeCampate_page.latitudineCLick.sendKeys("4700000");
         try {
             Thread.sleep(sleep);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        rf51LineeAereeCampate_page.Longitudine.sendKeys("10");
+        rf51LineeAereeCampate_page.Longitudine.sendKeys("700000");
         Thread.sleep(sleep);
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);",  rf51LineeAereeCampate_page.liveloDiTensione);
         Thread.sleep(sleep);
         rf51LineeAereeCampate_page.liveloDiTensione.click();
         Thread.sleep(sleep);
         rf51LineeAereeCampate_page.click380KW.click();
+        Thread.sleep(sleep);
+        rf51LineeAereeCampate_page.ClickAltezza.click();
+        try {
+            Thread.sleep(sleep);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        rf51LineeAereeCampate_page.click5NellaAltezza.click();
+        Thread.sleep(sleep);
         try {
             Thread.sleep(sleep);
         } catch (InterruptedException e) {
@@ -186,7 +197,8 @@ public class RF51LineeAereeCampate_StepDefinitons {
         }else
             rf51LineeAereeCampate_page.agguingiClick.click();
         Thread.sleep(sleep);
-        rf51LineeAereeCampate_page.codicePicchetto.sendKeys("automatico3");
+        double random = Math.random() * 22 + 1;
+        rf51LineeAereeCampate_page.codicePicchetto.sendKeys("automatico1"+random);
         try {
             Thread.sleep(sleep);
         } catch (InterruptedException e) {
@@ -228,7 +240,7 @@ public class RF51LineeAereeCampate_StepDefinitons {
         }
         rf51LineeAereeCampate_page.clickAmaroAutomatico3.click();
         Thread.sleep(sleep);
-        rf51LineeAereeCampate_page.clickLatitudineAutomatico3.sendKeys("43");
+        rf51LineeAereeCampate_page.clickLatitudineAutomatico3.sendKeys("4700000");
         Thread.sleep(sleep);
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", rf51LineeAereeCampate_page.liveloTensione);
         Thread.sleep(sleep);
@@ -240,7 +252,7 @@ public class RF51LineeAereeCampate_StepDefinitons {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        rf51LineeAereeCampate_page.clickLongitudineAutomatico3.sendKeys("10");
+        rf51LineeAereeCampate_page.clickLongitudineAutomatico3.sendKeys("700000");
         try {
             Thread.sleep(sleep);
         } catch (InterruptedException e) {
@@ -258,20 +270,29 @@ public class RF51LineeAereeCampate_StepDefinitons {
     @Then("\"L'utente inserisce i seguenti dati: Codice picchetto: automatico3 Regione: Lazio Comune Roma Serie sostegno NORM Altezza")
     public void l_utente_inserisce_i_seguenti_dati_codice_picchetto_automatico3_regione_lazio_comune_roma_serie_sostegno_norm_altezza() throws InterruptedException {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("window.scrollBy(0,600)","");
+      /* JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollBy(0,3664)","");
+         Actions actions = new Actions(Driver.getDriver());
         Thread.sleep(sleep);
+        actions.moveToElement(rf51LineeAereeCampate_page.aggiungiCampate);
+        actions.perform();*/
+        // Execute JavaScript to click the button
+   /*     WebElement element = Driver.getDriver().findElement(By.xpath("//*[@id=\"mat-tab-content-0-0\"]/div/div/linee-aeree-campate/div/div[4]/div[2]/div[1]/button[1]/i"));
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        Thread.sleep(700);
         rf51LineeAereeCampate_page.aggiungiCampate.click();
         Thread.sleep(sleep);
     }
 
     @Then("L'utente clicca il bottone Aggiungi nella tabella relativa alle campate posizionata sotto la tabella sostegni")
     public void l_utente_clicca_il_bottone_aggiungi_nella_tabella_relativa_alle_campate_posizionata_sotto_la_tabella_sostegni() throws InterruptedException {
-      rf51LineeAereeCampate_page.codiceSostegno.click();
+        Thread.sleep(sleep);
+        Thread.sleep(sleep);
+        rf51LineeAereeCampate_page.codiceSostegno.click();
         try {
             Thread.sleep(sleep);
         } catch (InterruptedException e) {
@@ -323,5 +344,11 @@ public class RF51LineeAereeCampate_StepDefinitons {
         rf51LineeAereeCampate_page.clickSalva.click();
         Thread.sleep(sleep);
         Driver.closeDriver();
+      */
     }
+
+
+
 }
+
+

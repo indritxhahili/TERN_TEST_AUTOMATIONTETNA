@@ -43,4 +43,10 @@ public class RF50AssociazioneConsistenzeLineeIncavo_page {
 
     @FindBy(xpath = "(//span[@class='mat-option-text'][normalize-space()='TE-ER-21-012_CN_14'])[1]")
     public WebElement CN_14click;
+
+    @FindBy(xpath = "//div[contains(text(),'Linee in cavo')]")
+     public WebElement LineaInCavo;
+
+    @FindBy(xpath = "//linee-cavo-terminali//button[@class='btn btn-primary m-1']")
+   public WebElement escePopUp;
 }

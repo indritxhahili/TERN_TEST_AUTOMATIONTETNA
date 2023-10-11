@@ -44,7 +44,7 @@ public class RF61VisualizzazioneRuoloCommittenteInFaseConfigurazione_Page {
     @FindBy(xpath = "/html/body/app-root/main/creazione-cantiere/div/div[3]/div[1]/div[2]/button")
     public WebElement clickAggiungi;
 
-    @FindBy(xpath = "/html/body/app-root/main/creazione-cantiere/div/div[3]/div[2]/ng2-smart-table/table/thead/tr[2]/td[2]/ng2-smart-table-cell/table-cell-edit-mode/div/table-cell-default-editor/div/input-editor/input")
+    @FindBy(xpath = "/html/body/app-root/main/creazione-cantiere/div/div[3]/div[2]/ng2-smart-table/table/thead/tr[2]/td[2]/ng2-smart-table-cell/table-cell-edit-mode/div/table-cell-custom-editor/app-input-cantiere/input")
     public WebElement nomeaAutomatico;
 
     @FindBy(xpath = "/html/body/app-root/main/creazione-cantiere/div/div[3]/div[2]/ng2-smart-table/table/thead/tr[2]/td[3]/ng2-smart-table-cell/table-cell-edit-mode/div/table-cell-default-editor/div/input-editor/input")
@@ -65,6 +65,6 @@ public class RF61VisualizzazioneRuoloCommittenteInFaseConfigurazione_Page {
     @FindBy(xpath = "(//*[name()='svg'][@class='svg-inline--fa fa-users-hard-hat xs-icon text-primary'])[1]")
     public WebElement organigrammantiere;
 
-    @FindBy(xpath = "//nav[@id='main-navbar']")
+    @FindBy(xpath = "//mat-step-header[@id='cdk-step-label-0-1']")
     public WebElement clickRuoli;
 }

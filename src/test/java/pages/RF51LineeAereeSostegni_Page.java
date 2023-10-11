@@ -44,19 +44,19 @@ public class RF51LineeAereeSostegni_Page {
   @FindBy(xpath = "//input[@formcontrolname='picchetto']")
   public WebElement codicePicchetto;
 
-  @FindBy(xpath = "//*[@id=\"mat-select-value-9\"]")
+  @FindBy(xpath = "//*[@id=\"mat-select-28\"]/div/div[2]")
   public WebElement DropdownRegione;
 
   @FindBy(xpath = "//span[normalize-space()='Lazio']")
   public WebElement clickLzioDropdwon;
 
-  @FindBy(xpath = "(//div[@id='mat-select-value-11'])[1]")
+  @FindBy(xpath = "//*[@id=\"mat-select-30\"]/div/div[2]")
   public WebElement comuneDropdown;
 
   @FindBy(xpath = "//span[normalize-space()='Fabrica di Roma']")
   public WebElement CommuneRoma;
 
-  @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[2]/div[1]/mat-select/div/div[2]")
+  @FindBy(xpath = "//*[@id=\"mat-select-32\"]/div/div[2]")
   public WebElement serieDropdwon;
 
   @FindBy(xpath = "(//span[normalize-space()='380_ST_31_5T'])[1]")
@@ -71,7 +71,7 @@ public class RF51LineeAereeSostegni_Page {
   @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[2]/div[3]/mat-select/div/div[2]")
   public WebElement ClickAltezza;
 
-  @FindBy(xpath = "(//span[normalize-space()='9'])[1]")
+  @FindBy(xpath = "//span[normalize-space()='15']")
   public WebElement click5NellaAltezza;
 
   @FindBy(xpath = "/html/body/div[2]/div[2]/div/mdb-modal-container/div/div/modal-linea-sostegno/div[2]/form/div/div[2]/div[4]/mat-select/div/div[2]")
