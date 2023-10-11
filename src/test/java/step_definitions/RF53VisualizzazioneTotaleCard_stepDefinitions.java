@@ -59,6 +59,7 @@ public class RF53VisualizzazioneTotaleCard_stepDefinitions {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
     @Then("L utente  seleziona  la  WBS TE-ER-{int}-{int}-Reattore {int} kV SE Roma Est e clicca la freccia a destra")
     public void l_utente_seleziona_la_wbs_te_er_reattore_k_v_se_roma_est_e_clicca_la_freccia_a_destra(Integer int1, Integer int2, Integer int3) throws InterruptedException {
